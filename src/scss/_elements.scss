@@ -1,0 +1,25 @@
+@use "fonts";
+@use "colors";
+
+.h5 {
+    color: colors.$main_color;
+    font-family: fonts.$text_font;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.725px; 
+}
+
+.h1 {
+    color: colors.$secondary_color;
+    font-family: fonts.$header_font;
+    font-size: 150px;
+    font-weight: 400;
+}
+
+.text {
+    color: colors.$main_color;
+    font-family: fonts.$text_font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+}

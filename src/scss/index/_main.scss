@@ -1,0 +1,63 @@
+@use "../fonts";
+@use "../colors";
+@use "../breakpoints";
+
+.explore-btn {
+    color: colors.$back_color;
+    font-family: fonts.$header_font;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    background-color: colors.$secondary_color;
+    border-radius: 274px;
+    padding: 118px 63px;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+        box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    max-width: 450px;
+
+    &__h5 {
+        margin: 0;
+    }
+
+    &__h1 {
+        margin: 0;
+    }
+
+    &__text {
+        margin: 0;
+
+        @media (max-width: breakpoints.$breakpoint_l) {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        align-items: center;
+    }
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: 287px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        flex-direction: column;
+        padding-top: 108px;
+        gap: 156px;
+    }    
+}

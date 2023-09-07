@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+.explore-btn {
+  color: #0b0d17;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 274px;
+  padding: 118px 63px;
+  transition: box-shadow 0.5s;
+}
+.explore-btn:hover {
+  box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 450px;
+}
+.text-block__h5 {
+  margin: 0;
+}
+.text-block__h1 {
+  margin: 0;
+}
+.text-block__text {
+  margin: 0;
+}
+@media (max-width: 1024px) {
+  .text-block__text {
+    text-align: center;
+  }
+}
+@media (max-width: 1024px) {
+  .text-block {
+    align-items: center;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 287px;
+}
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    padding-top: 108px;
+    gap: 156px;
+  }
+}
+
+body {
+  background-image: url("../img/backgound-large.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 5vh;
+}
+@media (max-width: 1024px) {
+  body {
+    background-image: url("../img/backgound-tablet.png");
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
