@@ -8,15 +8,20 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 250px);
     top: 0;
     left: 0;
     z-index: -1;
 
     @media (max-width: breakpoints.$tablet_breakpoint) {
         background-image: url("../img/index_background_table.jpg");
-        backgroud-size: cover;
-        height: calc(100vh + 210px);
+        height: calc(100vh + 250px);
+        width: 100vw;
+    }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        background-image: url("../img/index_background_mobile.jpg");
+        height: calc(100vh + 120px);
     }
 }
 
@@ -31,6 +36,10 @@
     @media (max-width: breakpoints.$tablet_breakpoint) {
         text-align: center;
     }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        font-size: 16px;
+    }
 }
 
 .h1 {
@@ -41,6 +50,11 @@
 
     @media (max-width: breakpoints.$tablet_breakpoint) {
         text-align: center;
+    }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        font-size: 80px;
+        line-height: 100px;
     }
 }
 
@@ -53,6 +67,11 @@
 
     @media (max-width: breakpoints.$tablet_breakpoint) {
         text-align: center;
+    }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        font-size: 15px;
+        line-height: 25px;
     }
 }
 
@@ -77,6 +96,12 @@
     @media (max-width: breakpoints.$tablet_breakpoint) {
         align-items: center;
     }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        width: auto;
+        max-width: 330px;
+        gap: 16px;
+    }
 }
 
 .explore-btn {
@@ -86,10 +111,10 @@
     font-weight: 400;
     letter-spacing: 2px;
 
-    padding: 100px 63px;
+    padding: 120px 63px;
 
     background-color: colors.$secondary_color;
-    border-radius: 274px;
+    border-radius: 273px;
 
     cursor: pointer;
 
@@ -97,6 +122,18 @@
 
     &:hover {
         box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        font-size: 20px;
+        letter-spacing: 1.25px;
+
+        padding: 63px 28px;
+        border-radius: 273px;
+
+        &:hover {
+            box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1);
+        }
     }
 }
 
@@ -113,4 +150,8 @@
         align-items: center;
         gap: 156px;
     }   
+
+    @media (max-width: breakpoints.$mobile_breakpoint) {
+        gap: 81px;
+    }
 }

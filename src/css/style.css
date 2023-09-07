@@ -1,4 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+.burgermenu {
+  width: 24px;
+  height: 3px;
+  background-color: #d0d6f9;
+  position: relative;
+  display: none;
+  transition: background-color 0.5s;
+}
+.burgermenu::before {
+  width: 24px;
+  height: 3px;
+  background-color: #d0d6f9;
+  position: absolute;
+  top: -10px;
+  content: "";
+  transition: transform 0.5s;
+}
+.burgermenu::after {
+  width: 24px;
+  height: 3px;
+  background-color: #d0d6f9;
+  position: absolute;
+  top: 10px;
+  content: "";
+  transition: transform 0.5s;
+}
+.burgermenu_active {
+  background-color: rgba(0, 0, 0, 0);
+}
+.burgermenu_active::before {
+  opacity: 1;
+  transform: rotate(45deg) translateY(14px);
+}
+.burgermenu_active::after {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(-14px);
+}
+@media (max-width: 425px) {
+  .burgermenu {
+    display: block;
+  }
+}
+
 .link {
   text-decoration: none;
   color: #FFF;
@@ -39,6 +82,15 @@
     font-weight: 700;
   }
 }
+@media (max-width: 425px) {
+  .link::before {
+    content: "0" counter(nav-links);
+    margin-right: 11px;
+  }
+  .link::after {
+    display: none;
+  }
+}
 
 .nav {
   display: flex;
@@ -50,15 +102,38 @@
 }
 @media (max-width: 1023px) {
   .nav {
-    gap: 37px;
-    padding: 39px 48px;
+    gap: calc((55vw - 265px) / 4);
+    padding: 39px calc((55vw - 236px) / 2);
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742271423px);
+  }
+}
+@media (max-width: 425px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    width: 60vw;
+    height: 100vh;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+    padding: 118px 0 0 32px;
+    gap: 32px;
+  }
+  .nav_show {
+    transform: scaleX(1);
   }
 }
 
 .logo {
   width: 48px;
+}
+@media (max-width: 425px) {
+  .logo {
+    width: 40px;
+  }
 }
 
 .logo-sec {
@@ -67,6 +142,11 @@
 @media (max-width: 1023px) {
   .logo-sec {
     padding: 24px 39px;
+  }
+}
+@media (max-width: 425px) {
+  .logo-sec {
+    padding: 0;
   }
 }
 
@@ -81,6 +161,11 @@
     padding: 0;
   }
 }
+@media (max-width: 425px) {
+  .header {
+    padding: 24px;
+  }
+}
 
 .home_back {
   background-image: url("../img/index_background.jpg");
@@ -88,7 +173,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh + 250px);
   top: 0;
   left: 0;
   z-index: -1;
@@ -96,8 +181,14 @@
 @media (max-width: 1023px) {
   .home_back {
     background-image: url("../img/index_background_table.jpg");
-    backgroud-size: cover;
-    height: calc(100vh + 210px);
+    height: calc(100vh + 250px);
+    width: 100vw;
+  }
+}
+@media (max-width: 425px) {
+  .home_back {
+    background-image: url("../img/index_background_mobile.jpg");
+    height: calc(100vh + 120px);
   }
 }
 
@@ -113,6 +204,11 @@
     text-align: center;
   }
 }
+@media (max-width: 425px) {
+  .h5 {
+    font-size: 16px;
+  }
+}
 
 .h1 {
   color: #FFF;
@@ -123,6 +219,12 @@
 @media (max-width: 1023px) {
   .h1 {
     text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .h1 {
+    font-size: 80px;
+    line-height: 100px;
   }
 }
 
@@ -136,6 +238,12 @@
 @media (max-width: 1023px) {
   .main-text {
     text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .main-text {
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
@@ -159,6 +267,13 @@
     align-items: center;
   }
 }
+@media (max-width: 425px) {
+  .text-column {
+    width: auto;
+    max-width: 330px;
+    gap: 16px;
+  }
+}
 
 .explore-btn {
   color: #0b0d17;
@@ -166,14 +281,25 @@
   font-size: 32px;
   font-weight: 400;
   letter-spacing: 2px;
-  padding: 100px 63px;
+  padding: 120px 63px;
   background-color: #FFF;
-  border-radius: 274px;
+  border-radius: 273px;
   cursor: pointer;
   transition: box-shadow 0.5s;
 }
 .explore-btn:hover {
   box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 425px) {
+  .explore-btn {
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    padding: 63px 28px;
+    border-radius: 273px;
+  }
+  .explore-btn:hover {
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1);
+  }
 }
 
 .main {
@@ -188,6 +314,11 @@
     flex-direction: column;
     align-items: center;
     gap: 156px;
+  }
+}
+@media (max-width: 425px) {
+  .main {
+    gap: 81px;
   }
 }
 
