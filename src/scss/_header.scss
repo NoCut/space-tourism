@@ -57,6 +57,18 @@
             bottom: -40px;
         }
     }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        &::before {
+            content: "0" counter(link);
+            margin-right: 11px;
+            font-weight: 700;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .nav {
@@ -76,6 +88,75 @@
         padding: 40px 2em;
         gap: 2em;
     }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: calc(100vh - 118px);
+        width: 50%;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        transform-origin: right;
+        padding: 118px 0  0 32px;
+
+        gap: 32px;
+
+
+        &_active {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.burgermenu {
+    width: 24px;
+    height: 3px;
+    background: #D0D6F9;
+    position: relative;
+    display: none;
+    visibility: visible;
+
+    &::after {
+        content: " ";
+        width: 24px;
+        height: 3px;
+        position: absolute;
+        background: #D0D6F9;
+        transition: all 1s;
+        top: -6px;
+    }
+
+    &::before {
+        content: " ";
+        width: 24px;
+        height: 3px;
+        position: absolute;
+        background: #D0D6F9;
+        transition: all 1s;
+        top: 6px;
+    }
+
+    &_active {
+        visibility: hidden;
+
+        &::after {
+            transform: rotate(45deg);
+            visibility: visible;
+            top: inherit;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+            visibility: visible;
+            top: inherit;
+        }
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        display: block;
+    }
 }
 
 .header {
@@ -86,5 +167,9 @@
 
     @media (max-width: breakpoints.$breakpoint_l) {
         padding: 0 0 0 39px;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        padding: 24px;
     }
 }

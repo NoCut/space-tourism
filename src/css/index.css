@@ -14,6 +14,13 @@
 .explore-btn:hover {
   box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
 }
+@media (max-width: 425px) {
+  .explore-btn {
+    padding: 65px 28px;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+  }
+}
 
 .text-block {
   display: flex;
@@ -40,6 +47,12 @@
     align-items: center;
   }
 }
+@media (max-width: 425px) {
+  .text-block {
+    gap: 16px;
+    max-width: 327px;
+  }
+}
 
 .main {
   display: flex;
@@ -54,16 +67,33 @@
     gap: 156px;
   }
 }
+@media (max-width: 425px) {
+  .main {
+    gap: 81px;
+    padding-top: 48px;
+  }
+}
 
-body {
+.img-back {
   background-image: url("../img/backgound-large.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 5vh;
+  background-attachment: scroll;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 1024px) {
-  body {
+  .img-back {
     background-image: url("../img/backgound-tablet.png");
+  }
+}
+@media (max-width: 425px) {
+  .img-back {
+    background-image: url("../img/background-small.png");
   }
 }
 

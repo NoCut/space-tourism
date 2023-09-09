@@ -1,14 +1,23 @@
 @use "index/includes";
 @use "breakpoints";
 
-body {
+.img-back {
     background-image: url("../img/backgound-large.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: scroll;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
 
     @media (max-width: breakpoints.$breakpoint_l) {
         background-image: url("../img/backgound-tablet.png");
     }
 
-    padding-bottom: 5vh;
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        background-image: url("../img/background-small.png");
+    }
 }

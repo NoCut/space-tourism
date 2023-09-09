@@ -18,6 +18,12 @@
     &:hover {
         box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
     }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        padding: 65px 28px;
+        font-size: 20px;
+        letter-spacing: 1.25px;
+    }
 }
 
 .text-block {
@@ -46,6 +52,11 @@
     @media (max-width: breakpoints.$breakpoint_l) {
         align-items: center;
     }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        gap: 16px;
+        max-width: 327px;
+    }
 }
 
 .main {
@@ -60,4 +71,9 @@
         padding-top: 108px;
         gap: 156px;
     }    
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        gap: 81px;
+        padding-top: 48px;
+    }
 }
