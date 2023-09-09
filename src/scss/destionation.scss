@@ -1,8 +1,8 @@
-@use "index/includes";
+@use "destionation/includes";
 @use "breakpoints";
 
 .img-back {
-    background-image: url("../img/index/backgound-large.png");
+    background: url("../img/destionation/background-large.png"), lightgray 0px 0px / 100% 100% no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
@@ -13,11 +13,12 @@
     top: 0;
     left: 0;
 
+
     @media (max-width: breakpoints.$breakpoint_l) {
-        background-image: url("../img/index/backgound-tablet.png");
+        background-image: url("../img/destionation/background-tablet.jpg");
     }
 
     @media (max-width: breakpoints.$breakpoint_sm) {
-        background-image: url("../img/index/background-small.png");
+        background-image: url("../img/destionation/background-small.jpg");
     }
 }

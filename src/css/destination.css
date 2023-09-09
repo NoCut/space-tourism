@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+.main-destionation {
+  padding: 76px 163px;
+}
+.main-destionation__h5 {
+  color: #fff;
+  text-transform: uppercase;
+}
+.main-destionation__h5::before {
+  content: "01";
+  font-weight: 700;
+  margin-right: 28px;
+  letter-spacing: 4.725px;
+  opacity: 0.25;
+}
+
+.img-back {
+  background: url("../img/destionation/background-large.png"), lightgray 0px 0px/100% 100% no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .img-back {
+    background-image: url("../img/destionation/background-tablet.jpg");
+  }
+}
+@media (max-width: 425px) {
+  .img-back {
+    background-image: url("../img/destionation/background-small.jpg");
+  }
+}
+
+/*# sourceMappingURL=destination.css.map */

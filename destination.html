@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/destination.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./src/img/logo.svg" alt="" class="header__logo logo">
+        <nav class="header__nav nav">
+            <a href="index.html" class="nav__link link link_active">HOME</a>
+            <a href="destination.html" class="nav__link link">DESTINATION</a>
+            <a href="#" class="nav__link link">CREW</a>
+            <a href="#" class="nav__link link">TECHNOLOGY</a>
+        </nav>
+        <div class="header__burgermenu burgermenu" onclick="burgermenuSwitch()"></div>
+    </header>
+
+    <main class="main-destionation">
+        <h5 class="main-destionation__h5 h5">Pick your destination</h5>
+
+        <div class="main-destionation__content content">
+            <img src="./src/img/destionation/moon.png" alt="" class="content__planet planet">
+
+            <div class="content__planet-info-panel planet-info-panel">
+                <div class="planet-info-panel__planet-choose planet-choose">
+                    <button class="planet-choose__btn btn">MOON</button>
+                    <button class="planet-choose__btn btn">MARS</button>
+                    <button class="planet-choose__btn btn">EUROPA</button>
+                    <button class="planet-choose__btn btn">TITAN</button>
+                </div>
+
+                <h2 class="planet-info-panel__h2 h2">MOON</h2>
+
+                <p class="planet-info-panel__text text">
+                    See our planet as you’ve never seen it 
+                    before. A perfect relaxing trip away to 
+                    help regain perspective and come back 
+                    refreshed. While you’re there, take in 
+                    some history by visiting the Luna 2 and 
+                    Apollo 11 landing sites.
+                </p>
+
+                <hr class="planet-info-panel__hr hr">
+
+                <div class="planet-info-panel__planet-params planet-params">
+                    <div class="planet-params__param param">
+                        <p class="param__sh2 sh2">AVG. DISTANCE</p>
+                        <p class="param__sh1 sh1">384,400 km</p>
+                    </div>
+                    <div class="planet-params__param param">
+                        <p class="param__sh2 sh2">Est. travel time</p>
+                        <p class="param__sh1 sh1">3 days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="img-back"></div>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>

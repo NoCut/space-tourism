@@ -1,0 +1,22 @@
+@use "../colors";
+@use "../fonts";
+@use "../breakpoints";
+
+
+
+.main-destionation {
+    padding: 76px 163px;
+
+    &__h5 {
+        color: colors.$secondary_color;
+        text-transform: uppercase;
+
+        &::before {
+            content: "01";
+            font-weight: 700;
+            margin-right: 28px;
+            letter-spacing: 4.725px;
+            opacity: 0.25;
+        }
+    }
+}
