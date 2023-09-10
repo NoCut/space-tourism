@@ -102,6 +102,10 @@
         padding: 118px 0  0 32px;
 
         gap: 32px;
+        z-index: 1;
+
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(40.774227142333984px);
 
 
         &_active {
@@ -116,7 +120,10 @@
     background: #D0D6F9;
     position: relative;
     display: none;
-    visibility: visible;
+    transition: background 0.7s;
+
+    z-index: 2;
+
 
     &::after {
         content: " ";
@@ -139,17 +146,17 @@
     }
 
     &_active {
-        visibility: hidden;
+        background: rgba(0, 0, 0, 0);
 
         &::after {
-            transform: rotate(45deg);
-            visibility: visible;
+            transform: rotate(675deg);
+            background: #D0D6F9;
             top: inherit;
         }
 
         &::before {
-            transform: rotate(-45deg);
-            visibility: visible;
+            transform: rotate(-675deg);
+            background: #D0D6F9;
             top: inherit;
         }
     }

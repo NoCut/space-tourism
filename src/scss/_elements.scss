@@ -9,10 +9,55 @@
     font-weight: 400;
     letter-spacing: 4.725px; 
 
-    @media (max-width: breakpoints.$breakpoint_sm) {
-        font-size: 16px;
+    &_white {
+        color: colors.$secondary_color;
     }
 
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+        text-align: center;
+    }
+
+}
+
+.sh1 {
+    color: colors.$secondary_color;
+    font-family: fonts.$header_font;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        text-align: center;
+    }
+}
+
+.h2 {
+    color: colors.$secondary_color;
+    font-family: fonts.$header_font;
+    font-size: 100px;
+    font-weight: 400;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        font-size: 80px;
+    }
+}
+
+.sh2 {
+    color: colors.$main_color;
+    font-family: fonts.$text_font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        text-align: center;
+    }
 }
 
 .h1 {
@@ -28,12 +73,19 @@
 
 .text {
     color: colors.$main_color;
-    font-family: fonts.$text_font;
+    font-family: fonts.$body_font;
     font-size: 18px;
     font-weight: 400;
     line-height: 32px;
+    font-style: normal;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        text-align: center;
+        font-size: 16px;
+    }
 
     @media (max-width: breakpoints.$breakpoint_sm) {
         font-size: 15px;
     }
 }
+

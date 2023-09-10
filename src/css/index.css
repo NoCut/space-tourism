@@ -75,7 +75,7 @@
 }
 
 .img-back {
-  background-image: url("../img/backgound-large.png");
+  background-image: url("../img/index/backgound-large.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: scroll;
@@ -88,12 +88,12 @@
 }
 @media (max-width: 1024px) {
   .img-back {
-    background-image: url("../img/backgound-tablet.png");
+    background-image: url("../img/index/backgound-tablet.png");
   }
 }
 @media (max-width: 425px) {
   .img-back {
-    background-image: url("../img/background-small.png");
+    background-image: url("../img/index/background-small.png");
   }
 }
 

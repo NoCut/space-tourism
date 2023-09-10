@@ -2,14 +2,166 @@
 @use "../fonts";
 @use "../breakpoints";
 
+.planet {
+    max-width: 445px;
 
+    @media (max-width: breakpoints.$breakpoint_l) {
+        max-width: 300px;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+    max-width: 170px;
+    }
+}
+
+.param {
+    &__sh2 {
+        margin: 0;
+    }
+
+    &__sh1 {
+        margin: 12px 0 0;
+    }
+}
+
+.planet-params {
+    display: flex;
+    gap: 79px;
+    padding-top: 28px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        gap: 110px;
+        justify-content: center;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 32px;
+        gap: 32px;
+    }
+}
+
+.btn {
+    color: colors.$main_color;
+    font-family: fonts.$text_font;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 0;
+        opacity: 0.5021;
+        height: 3px;
+        background: colors.$secondary_color;
+        transition: width 0.3s;
+    }
+
+    &:hover {
+        color: colors.$secondary_color;
+        opacity: 0.5021;
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &__active {
+        cursor: auto;
+        color: colors.$secondary_color;
+
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 1;
+    
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        font-family: 14px;
+        letter-spacing: 2.362px;
+    }
+}
+
+.planet-choose {
+    display: flex;
+    gap: 36px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        justify-content: center;
+    }
+}
+
+.hr {
+    width: 444px;
+    height: 1px;
+    background: #383B4B;
+    border: 0;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        width: 100%;
+    }
+}
+
+.planet-info-panel {
+    max-width: 445px;
+
+    &__h2 {
+        margin: 37px 0 0;
+
+        @media (max-width: breakpoints.$breakpoint_l) {
+            text-align: center;
+        }
+    }
+
+    &__hr {
+        margin-top: 54px;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        max-width: 575px;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 64px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        flex-direction: column;
+        align-items: center;
+        gap: 53px;
+    }
+}
 
 .main-destionation {
     padding: 76px 163px;
 
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        padding: 34px 24px;
+    }
+
     &__h5 {
-        color: colors.$secondary_color;
         text-transform: uppercase;
+        margin: 0;
 
         &::before {
             content: "01";
@@ -17,6 +169,13 @@
             margin-right: 28px;
             letter-spacing: 4.725px;
             opacity: 0.25;
+        }
+
+        @media (max-width: breakpoints.$breakpoint_sm) {
+            
+            &::before {
+                margin-right: 18px;
+            }
         }
     }
 }

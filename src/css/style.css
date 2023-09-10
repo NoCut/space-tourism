@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
 .link {
   text-decoration: none;
   counter-increment: link;
@@ -86,6 +86,9 @@
     transform-origin: right;
     padding: 118px 0 0 32px;
     gap: 32px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742271423px);
   }
   .nav_active {
     transform: scaleX(1);
@@ -98,7 +101,8 @@
   background: #D0D6F9;
   position: relative;
   display: none;
-  visibility: visible;
+  transition: background 0.7s;
+  z-index: 2;
 }
 .burgermenu::after {
   content: " ";
@@ -119,16 +123,16 @@
   top: 6px;
 }
 .burgermenu_active {
-  visibility: hidden;
+  background: rgba(0, 0, 0, 0);
 }
 .burgermenu_active::after {
-  transform: rotate(45deg);
-  visibility: visible;
+  transform: rotate(675deg);
+  background: #D0D6F9;
   top: inherit;
 }
 .burgermenu_active::before {
-  transform: rotate(-45deg);
-  visibility: visible;
+  transform: rotate(-675deg);
+  background: #D0D6F9;
   top: inherit;
 }
 @media (max-width: 425px) {
@@ -161,9 +165,55 @@
   font-weight: 400;
   letter-spacing: 4.725px;
 }
+.h5_white {
+  color: #fff;
+}
 @media (max-width: 425px) {
   .h5 {
     font-size: 16px;
+    letter-spacing: 2.7px;
+    text-align: center;
+  }
+}
+
+.sh1 {
+  color: #fff;
+  font-family: "Bellefair", serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (max-width: 425px) {
+  .sh1 {
+    text-align: center;
+  }
+}
+
+.h2 {
+  color: #fff;
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  .h2 {
+    font-size: 80px;
+  }
+}
+
+.sh2 {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.362px;
+  text-transform: uppercase;
+}
+@media (max-width: 425px) {
+  .sh2 {
+    text-align: center;
   }
 }
 
@@ -181,10 +231,17 @@
 
 .text {
   color: #d0d6f9;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
+  font-style: normal;
+}
+@media (max-width: 1024px) {
+  .text {
+    text-align: center;
+    font-size: 16px;
+  }
 }
 @media (max-width: 425px) {
   .text {
