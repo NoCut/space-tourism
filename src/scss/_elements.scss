@@ -8,6 +8,7 @@
     font-size: 28px;
     font-weight: 400;
     letter-spacing: 4.725px; 
+    text-transform: uppercase;
 
     &_white {
         color: colors.$secondary_color;
@@ -18,19 +19,45 @@
         letter-spacing: 2.7px;
         text-align: center;
     }
-
 }
 
-.sh1 {
+.h4 {
     color: colors.$secondary_color;
     font-family: fonts.$header_font;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 400;
     text-transform: uppercase;
 
+    &_low-op {
+        opacity: 0.5042;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+    }
 
     @media (max-width: breakpoints.$breakpoint_sm) {
+        font-size: 16px;
+    }
+}
+
+.h3 {
+    color: colors.$secondary_color;
+    font-family: fonts.$header_font;
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        font-size: 40px;
+        font-weight: 400;
         text-align: center;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        font-size: 24px;
     }
 }
 
@@ -68,6 +95,19 @@
 
     @media (max-width: breakpoints.$breakpoint_sm) {
         font-size: 80px;
+    }
+}
+
+.sh1 {
+    color: colors.$secondary_color;
+    font-family: fonts.$header_font;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        text-align: center;
     }
 }
 

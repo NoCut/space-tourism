@@ -1,0 +1,145 @@
+@use "../colors";
+@use "../fonts";
+@use "../breakpoints";
+
+.crew-img {
+    margin-top: -25px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        margin-top: 40px;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        max-width: 177px;
+    }
+}
+
+.hr {
+    display: none;
+    width: 100%;
+    height: 1px;
+    background: #383B4B;
+    border: none;
+
+    margin: 0;
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        display: block;
+    }
+}
+
+.crew-btn {
+    width: 15px;
+    height: 15px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: colors.$secondary_color;
+    opacity: 0.1744;
+
+    cursor: pointer;
+
+    &_active {
+        opacity: 1;
+
+        cursor: auto;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+    }
+}
+
+.choose-panel {
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        justify-content: center;
+    }
+}
+
+.crew-panel {
+    max-width: 500px;
+
+    &__h4 {
+        margin: 0;
+
+        @media (max-width: breakpoints.$breakpoint_sm) {
+            margin-top: 32px;
+        }
+    }
+
+    &__h3 {
+        margin: 15px 0 0;
+
+        @media (max-width: breakpoints.$breakpoint_l) {
+            margin-top: 8px;
+        }
+    }
+
+    &__text {
+        margin: 27px 0 0;
+
+        @media (max-width: breakpoints.$breakpoint_l) {
+        margin-top: 16px;
+        }
+    }
+
+    &__choose-panel {
+        margin: 120px 0 0;
+
+        @media (max-width: breakpoints.$breakpoint_l) {
+            margin-top: 40px;
+        }
+
+        @media (max-width: breakpoints.$breakpoint_sm) {
+            order: -1;
+            margin-top: 32px;
+        }
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        display: flex;
+        flex-direction: column;
+        max-width: 327px;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        flex-direction: column-reverse;
+    }
+}
+
+.main-crew {
+    padding: 76px 166px 0;
+
+    &__h5 {
+        margin: 0;
+
+        &::before {
+            content: "02";
+            font-weight: 700;
+            margin-right: 28px;
+            letter-spacing: 4.725px;
+            opacity: 0.25;
+        }
+    }
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        padding: 40px 38px 0;
+    }
+}

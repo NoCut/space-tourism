@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/crew.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./src/img/logo.svg" alt="" class="header__logo logo">
+        <nav class="header__nav nav">
+            <a href="index.html" class="nav__link link ">HOME</a>
+            <a href="destination.html" class="nav__link link">DESTINATION</a>
+            <a href="crew.html" class="nav__link link link_active">CREW</a>
+            <a href="#" class="nav__link link">TECHNOLOGY</a>
+        </nav>
+        <div class="header__burgermenu burgermenu" onclick="burgermenuSwitch()"></div>
+    </header>
+
+    <main class="main-crew">
+        <h5 class="main-crew__h5 h5 h5_white">Meet your crew</h5>
+
+        <div class="main-crew__content content">
+            <div class="content__crew-panel crew-panel">
+                <h4 class="crew-panel__h4 h4 h4_low-op">Commander</h4>
+                <h3 class="crew-panel__h3 h3">Douglas Hurley</h3>
+                <p class="crew-panel__text text">
+                    Douglas Gerald Hurley is an American engineer, 
+                    former Marine Corps pilot and former NASA astronaut. 
+                    He launched into space for the third time as commander of Crew Dragon Demo-2.
+                </p>
+
+                <div class="crew-panel__choose-panel choose-panel">
+                    <button class="choose-panel__crew-btn crew-btn crew-btn_active"></button>
+                    <button class="choose-panel__crew-btn crew-btn"></button>
+                    <button class="choose-panel__crew-btn crew-btn"></button>
+                    <button class="choose-panel__crew-btn crew-btn"></button>
+                </div>
+            </div>
+            <hr class="content__hr hr">
+            <img src="./src/img/crew/crew-1.png" alt="Douglas Hurley" class="content__crew-img crew-img">
+        </div>
+    </main>
+    <div class="img-back"></div>
+    <script src="./src/js/index.js"></script>
+</body>
+</html>
