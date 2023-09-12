@@ -35,10 +35,14 @@
   background: #fff;
   opacity: 0.1744;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .crew-btn_active {
   opacity: 1;
   cursor: auto;
+}
+.crew-btn:hover {
+  opacity: 0.5;
 }
 @media (max-width: 425px) {
   .crew-btn {

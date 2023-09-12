@@ -220,6 +220,19 @@
   }
 }
 
+.sh3 {
+  color: #d0d6f9;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2.7px;
+}
+@media (max-width: 1024px) {
+  .sh3 {
+    text-align: center;
+  }
+}
+
 .h2 {
   color: #fff;
   font-family: "Bellefair", serif;

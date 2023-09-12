@@ -1,0 +1,23 @@
+@use "technology/includes";
+@use "breakpoints";
+
+.img-back {
+    background-image: url("../img/technology/background-large.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        background-image: url("../img/technology/background-tablet.jpg");
+    }
+
+    @media (max-width: breakpoints.$breakpoint_sm) {
+        background-image: url("../img/technology/background-small.jpg");
+    }
+}

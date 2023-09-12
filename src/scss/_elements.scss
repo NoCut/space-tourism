@@ -61,6 +61,19 @@
     }
 }
 
+.sh3 {
+    color: colors.$main_color;
+    font-family: fonts.$text_font;
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+
+    @media (max-width: breakpoints.$breakpoint_l) {
+        text-align: center;
+    }
+}
+
 .h2 {
     color: colors.$secondary_color;
     font-family: fonts.$header_font;
