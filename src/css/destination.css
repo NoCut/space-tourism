@@ -70,18 +70,18 @@
 .btn:hover::after {
   width: 100%;
 }
-.btn__active {
+.btn_active {
   cursor: auto;
   color: #fff;
 }
-.btn__active::after {
+.btn_active::after {
   width: 100%;
   opacity: 1;
 }
-.btn__active:hover {
+.btn_active:hover {
   opacity: 1;
 }
-.btn__active:hover::after {
+.btn_active:hover::after {
   width: 100%;
 }
 @media (max-width: 425px) {
@@ -146,6 +146,9 @@
     gap: 53px;
   }
 }
+.content_hide {
+  display: none;
+}
 
 .main-destionation {
   padding: 76px 163px;
@@ -156,7 +159,6 @@
   }
 }
 .main-destionation__h5 {
-  text-transform: uppercase;
   margin: 0;
 }
 .main-destionation__h5::before {

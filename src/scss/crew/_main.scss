@@ -42,14 +42,14 @@
 
     transition: all 0.5s;
 
+    &:hover {
+        opacity: 0.5;
+    }
+
     &_active {
         opacity: 1;
 
         cursor: auto;
-    }
-
-    &:hover {
-        opacity: 0.5;
     }
 
     @media (max-width: breakpoints.$breakpoint_sm) {

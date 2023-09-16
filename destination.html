@@ -26,8 +26,8 @@
             <img src="./src/img/destionation/moon.png" alt="MOON" class="content__planet planet">
 
             <div class="content__planet-info-panel planet-info-panel">
-                <div class="planet-info-panel__planet-choose planet-choose">
-                    <button class="planet-choose__btn btn btn__active">MOON</button>
+                <div class="planet-info-panel__planet-choose planet-choose" onclick="destinationSwitch(event)">
+                    <button class="planet-choose__btn btn btn_active">MOON</button>
                     <button class="planet-choose__btn btn">MARS</button>
                     <button class="planet-choose__btn btn">EUROPA</button>
                     <button class="planet-choose__btn btn">TITAN</button>
@@ -61,5 +61,6 @@
     </main>
     <div class="img-back"></div>
     <script src="./src/js/index.js"></script>
+    <script src="./src/js/destination.js"></script>
 </body>
 </html>
